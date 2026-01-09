@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Striver CF Ratings",
+  "version": "1.1",
+  "description": "Shows Codeforces ratings on Striver CP Sheet",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://takeuforward.org/competitive-programming/strivers-cp-sheet*"
+      ],
+      "js": ["content.js"]
+    }
+  ],
+  
+"icons": {
+    "128": "icons/icon128.png"
+  }
+}
