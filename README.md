@@ -1,38 +1,26 @@
-Striver CF Ratings – Chrome / Brave Extension
+⭐ Striver CF Ratings – Browser Extension
 
-This browser extension displays Codeforces problem ratings directly on Striver’s CP Sheet, saving you time by eliminating the need to open each problem on Codeforces.
+A lightweight browser extension that shows Codeforces problem ratings directly on Striver’s CP Sheet, so you don’t have to open every problem on Codeforces.
 
-It supports both Codeforces URL formats:
+🚀 What It Does
 
-/problemset/problem/{contestId}/{index}
+Fetches ratings from the official Codeforces API
 
-/contest/{contestId}/problem/{index}
+Displays ratings next to each problem link
 
-Features
-
-Automatically fetches ratings from the official Codeforces API
-
-Displays ratings next to each Codeforces problem link
+Supports both Codeforces URL formats
 
 Works with the updated Striver CP Sheet
 
-Compatible with Chrome and Brave
+Compatible with Chrome & Brave
 
-No login, no permissions, lightweight and fast
+🌐 Supported Page
 
-Supported Page
+👉 https://takeuforward.org/competitive-programming/strivers-cp-sheet
 
-https://takeuforward.org/competitive-programming/strivers-cp-sheet
+📁 Folder Structure
 
-Installation Instructions (Manual – Unpacked Extension)
-Step 1: Download / Create Extension Folder
-
-Create a folder (for example):
-
-striver-cf-ratings
-
-
-Inside it, place the following files:
+Your extension folder should look like this:
 
 striver-cf-ratings/
 │
@@ -42,111 +30,91 @@ striver-cf-ratings/
     └── icon128.png
 
 
-If you do not have an icon, you may remove the icons block from manifest.json.
+🔹 If you don’t have an icon, remove the icons section from manifest.json.
 
-Step 2: Load Extension in Browser
-Chrome
+🛠 Installation (Manual)
+Chrome / Brave
 
-Open chrome://extensions
+Open:
 
-Enable Developer mode (top-right)
+Chrome → chrome://extensions
 
-Click Load unpacked
+Brave → brave://extensions
 
-Select the striver-cf-ratings folder
-
-Brave
-
-Open brave://extensions
-
-Enable Developer mode
+Turn Developer mode ON (top-right)
 
 Click Load unpacked
 
 Select the striver-cf-ratings folder
 
-Step 3: Use the Extension
+✅ Extension is now installed
 
-Open the Striver CP Sheet:
+📌 How to Use
 
-https://takeuforward.org/competitive-programming/strivers-cp-sheet
+Open the Striver CP Sheet
+
+Wait 1–2 seconds
+
+Ratings will appear like:
+
+<img width="1344" height="458" alt="image" src="https://github.com/user-attachments/assets/52bd9f5c-eaef-4380-84b6-10febd5ee734" />
 
 
-Wait 1–2 seconds for ratings to load
+🔄 After Making Changes
 
-Codeforces ratings will appear next to problem links as:
+If you edit any file:
 
-⭐ 1200
-
-Important Notes
-🔄 Reload After Changes
-
-If you edit content.js or manifest.json:
-
-Go to chrome://extensions / brave://extensions
+Go to extensions page
 
 Click Reload
 
-Refresh the Striver CP Sheet page
+Refresh the Striver page
 
-⚠️ Why Some Problems May Not Show Ratings
+⚠️ Changes won’t apply without reloading.
 
-Some Codeforces problems do not have a rating
+❓ Why Some Problems Have No Rating
 
-Very new problems may not yet be rated
+Problem is unrated on Codeforces
 
-Non-Codeforces links are ignored
+Problem is very new
 
-How It Works (High-Level)
+Link is not a Codeforces problem
 
-Fetches all problems from:
+This is expected behavior.
 
-https://codeforces.com/api/problemset.problems
+⚙️ How It Works (Simple)
 
+Fetches all problems from Codeforces API
 
-Builds a mapping:
+Maps: contestId + problemIndex → rating
 
-contestId + problemIndex → rating
+Finds Codeforces links on Striver sheet
 
+Adds rating next to each link
 
-Scans all links on the Striver page
-
-Matches Codeforces URLs
-
-Injects rating next to the problem link
-
-Troubleshooting
-Ratings Not Appearing?
+🧪 Troubleshooting
+Ratings not showing?
 
 Open DevTools → Console
 
-Look for:
+You should see:
 
 Striver CF Ratings: Fetching Codeforces ratings...
 
 
-If missing, reload the extension and refresh the page
+If not:
 
-Manifest Errors?
+Reload the extension
 
-Ensure manifest.json is saved as UTF-8
+Refresh the page
 
-Load the folder, not the file
+🌍 Browser Support
+Browser	Works
+Chrome	✅
+Brave	✅
+Edge	✅
+Firefox	❌
+⚠️ Disclaimer
 
-Ensure icons/icon128.png exists (or remove icon config)
-
-Browser Compatibility
-Browser	Supported
-Chrome	Yes
-Brave	Yes
-Edge	Yes (Chromium)
-Firefox	No (requires MV2 rewrite)
-Disclaimer
-
-This project is unofficial and not affiliated with:
-
-Codeforces
-
-takeUforward / Striver
-
-All data is fetched from the public Codeforces API.
+This is an unofficial project.
+Not affiliated with Codeforces or takeUforward / Striver.
